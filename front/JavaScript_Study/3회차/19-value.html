@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>value 속성</title>
+</head>
+<body>
+    <!-- <input id="talk">
+    <input id="push" type="button" value="push"> -->
+
+    <form id="form">
+        <!-- 똑같은 input이 여러개일 때 name으로 식별해주는 것이 좋다-->
+        <input name="name">
+        <input name="nick">
+        <input type="submit"> <!-- 눌렀을 때 값 제출 됨 -->
+
+    </form>
+    <script>
+        // const input = document.getElementById("talk")
+        // const button = document.getElementById("push")
+
+        // input.addEventListener("keyup",function(e){
+        //     console.log(e.target.value)
+        // })
+
+        // button.addEventListener("click",function(){
+        //     const p = document.createElement("P")
+        //     p.textContent =  input.value
+        //     document.body.append(p)
+        // })
+        const form = document.getElementById("form")
+        form.addEventListener("submit", function(event){
+            event.preventDefault() //새로고침 안하게 만듬 (기본적인걸 실행X)
+            const p = document.createElement("p")
+            p.textContent = `${event.target.name.value}의 별명은
+                ${event.target.nick.value}입니다.`
+            document.body.append(p)
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <script>
+        const meal = {
+            what : "김치볶음밥",
+            who : "혼자",
+            when : "방금"
+        }
+
+        console.log(typeof meal) //object
+        
+
+        //JSON 메소드로 변환
+
+        console.log(JSON.stringify(meal)) //{"what":"김치볶음밥","who":"혼자","when":"방금"}
+        
+        let sm = JSON.stringify(meal)
+        console.log(typeof sm) // string
+
+        let pm = JSON.parse(sm) // {what: '김치볶음밥', who: '혼자', when: '방금'}
+        console.log(typeof pm) // object
+
+
+    </script>
+</body>
+</html>

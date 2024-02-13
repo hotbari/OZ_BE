@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+
+    <p>누가 비둘기 밥을 주냐</p>
+    <p class="a">피해 보는 사람 생각안하냐</p>
+    <p class="a" id="b">니네 집 앞에다 줘라</p>
+
+    <script>
+        const p = document.querySelector("p")
+        console.log(p.textContent)
+        p.textContent = "밥 주지 마라"
+    </script>
+</body>
+</html>

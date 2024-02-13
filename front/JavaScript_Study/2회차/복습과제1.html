@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시험점수조회</title>
+
+</head>
+<body>
+    <div id="result"></div>
+    <!-- 입력창을 띄워 사용자의 점수를 0~100 사이에서 받는다
+    입력받은 점수에 맞춰 등급을 나눈다
+    나의 기말고사 점수는 00점, 학점은 00 -->
+    <script>
+        let score = parseInt(prompt("중간고사 점수를 입력하세요."))
+
+        let resultText
+
+        //출력물에도 변수를 주세요,, 
+        //아무것도 주지 않고 바라지 마세요
+
+        if (score>=90){
+            resultText = `기말고사 점수는 ${score}점, 학점은 A! 대박`
+        }else if(score>=80){
+            resultText = `기말고사 점수는 ${score}점, 학점은 B`
+        }else if(score>=70){
+            resultText = `기말고사 점수는 ${score}점, 학점은 C`
+        }else if(score>=60){
+            resultText = `기말고사 점수는 ${score}점, 학점은 D`
+        }else{
+            resultText = `기말고사 점수는 ${score}점, 학점은 F2. 재수강 각`
+        }
+
+    
+        const result = document.getElementById("result")
+        const p = document.createElement("p")
+        p.textContent = resultText
+        result.appendChild(p)
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체리터럴</title>
+</head>
+<body>
+    
+    <script>
+        const cat = {
+            name : "고양이",
+            type : "포유류"
+        }
+
+        const bbini = {
+            age : 3,
+            like : ["햇살","상자","구석"],
+            ...cat
+        }
+
+        console.log(bbini)
+        console.log(bbini.age)
+        console.log(bbini.like)
+        console.log(bbini['like'])
+        console.log(...cat.name) //대괄호없이 요소만 추력
+        console.log(...bbini.like) //대괄호없이 요소만 추력
+
+    </script>
+</body>
+</html>

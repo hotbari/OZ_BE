@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이머 메소드</title>
+</head>
+<body>
+    <p id="now"></p>
+    <button id="start">재시작</button>
+    <button id="stop">정지</button>
+
+    <!-- 재시작하는 버튼 만들고 싶은데!!!-->
+    <script>
+        let timerId
+        let i = 0
+        let j = i
+
+
+
+        timerId = setInterval(function(){
+            const p = document.getElementById("now")
+            i ++
+            p.textContent = i
+
+        }, 1000);   
+
+        const stopBtn = document.getElementById("stop")
+        stopBtn.addEventListener("click",function(){
+            clearInterval(timerId)
+        })
+
+
+        const restartBtn = document.getElementById("start")
+        restartBtn.addEventListener("click",function(){
+            setInterval(function(){
+            const p = document.getElementById("now")
+            j ++
+            p.textContent = j
+
+        }, 1000);   
+        })
+        
+        
+
+    </script>
+</body>
+</html>

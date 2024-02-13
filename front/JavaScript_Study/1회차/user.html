@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 정보 입력받고 출력하기</title>
+    <style>
+        #mem {
+            color: orange;
+        }
+        
+
+    </style>
+</head>
+<body>
+
+    <h1 id="name"></h1>
+    <p id="mem"></p>
+    <p id="song"></p>
+
+    <script>
+        const nameElement = document.querySelector("#name")
+        let name = prompt("이름 입력")
+        nameElement.textContent = name
+
+        const memElement = document.querySelector("#mem")
+        let mem = prompt("최애 멤버 입력")
+        memElement.textContent = `최애는 ${mem}입니다!`
+
+        const songElement = document.querySelector("#song")
+        let song = prompt("최애 노래 입력")
+        songElement.textContent = `가장 좋아하는 노래는 ${song}이에요 ㅎ`
+
+
+    </script>
+    
+</body>
+</html>

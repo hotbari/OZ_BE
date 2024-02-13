@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>할일 목록</title>
+    <link href="todo.css" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <div class="app">
+            <h1>연 투 두</h1>
+            
+            <!-- 할 일 추가하면 보여줄 곳-->
+            <ul id="todo-list"></ul>
+
+            <form id="todo-form">
+                <input name="todo"
+                placeholder="해야 할 일을 하자"
+                autocomplete="off">
+                <input type="submit" value="add">
+
+            </form>
+
+
+        </div>
+    </div>
+    <script src="todo.js" ></script>
+</body>
+</html>

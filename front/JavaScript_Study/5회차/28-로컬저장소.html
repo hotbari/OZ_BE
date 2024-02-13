@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로컬저장소</title>
+</head>
+<body>
+    <p id="item">라이즈</p>
+    <button id="set">SET</button>
+    <button id="get">GET</button>
+    <button id="remove">REMOVE</button>
+    <button id="clear">CLEAR</button>
+    <script>
+
+        //영구 저장되어서 코드를 지워도 웹페이지에 남아있음
+        //문자열만 저장 가능
+
+        const item = document.getElementById("item")
+        document.getElementById("set").addEventListener("click",function(){
+            localStorage.setItem("그룹명", item.textContent) 
+        })
+
+        document.getElementById("get").addEventListener("click",function(){
+            alert(localStorage.getItem("그룹명"))
+        })
+
+        document.getElementById("remove").addEventListener("click",function(){
+            localStorage.removeItem("그룹명")
+        }) //remove 후 get을 하면 null 값 alert 됨
+
+        document.getElementById("clear").addEventListener("click",function(){
+            localStorage.clear()
+        })
+
+        localStorage.setItem("앨범", JSON.stringify({
+            name : "Get a guitar",
+            song : 2
+        }))
+
+
+    </script>
+    
+</body>
+</html>

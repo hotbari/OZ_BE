@@ -1,0 +1,26 @@
+
+function sayFood(food1, food2) {
+	// let result
+    console.log(food1)
+    console.log(food2)
+    console.log("시킬게요")
+
+    // return result
+}
+
+
+let result = sayFood("마라샹궈","꿔바로우")
+
+
+// console.log(result)
+
+// console.log(result)
+
+// sayFood("비빔냉면","물냉면")
+
+
+// function greet(name) {
+//     console.log("안녕"+name+"님")
+// }
+
+// greet("오즈")

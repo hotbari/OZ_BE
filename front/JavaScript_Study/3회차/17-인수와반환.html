@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인수와 반환</title>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+
+        console.log(createP("정성찬","orange"))
+        console.log(createP("보고싶어","red"))
+        console.log(createP("ㅠㅠ","blue"))
+
+        function createP(content, color) {
+            const p = document.createElement("p")
+            p.style.color = color
+            p.textContent = content
+            document.querySelector("#container").append(p)
+
+            return `방금 만든 콘텐츠 : ${content}, 색상: ${color}`
+        }
+
+
+        // function sample() {
+        //     console.log("test")
+        //     // return "hey"
+        // }
+
+        // console.log(sample())
+    </script>
+</body>
+</html>

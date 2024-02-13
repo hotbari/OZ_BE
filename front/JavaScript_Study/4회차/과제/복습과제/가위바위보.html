@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강윙방윙봉</title>
+</head>
+<body>
+    <h1>가위바위보 게임</h1>
+    <p>가위, 바위, 보 중 하나를 입력하세요</p>
+    <form id="form" action="#">
+        <input type="text" id="enter" autocomplete="off">
+        <input type="submit" value="결과 확인" id="check">
+        
+        <p><span id="you">당신의 선택:</span><span>/</span><span id="computer">컴퓨터의 선택:</span><span>/</span><span id="result">결과:</span></p>
+
+    </form>
+
+    <script>
+        const enter = document.getElementById("enter")
+        const check = document.getElementById("check")
+        const you = document.getElementById("you")
+        const computer = document.getElementById("computer")
+        const result = document.getElementById("result")
+
+        let list = ["임시","가위","바위","보"]
+        form.addEventListener("submit",function(event){
+            event.preventDefault()
+            let rsp = event.target.enter.value
+            // console.log(rsp)
+            you.innerHTML = `당신의 선택 : ${rsp}`
+
+            let index = ""
+            let com = ""
+            index = Math.floor(Math.random()*4)+1
+            com = list[index]
+            computer.innerHTML = `컴퓨터의 선택 : ${com}`
+
+
+            if(rsp=="가위"){
+                
+                // console.log(com)
+
+
+                if(com=="가위"){
+                    result.innerHTML = `결과 : 비겼습니다!`
+                }else if(com=="바위"){
+                    result.innerHTML = `결과 : 졌습니다 ㅠㅠ!`
+                }else{
+                    result.innerHTML = `결과 : 이겼습니다 ㅇㅁㅇ !`
+                }
+
+
+            }
+
+            if(rsp=="바위"){
+                let index = ""
+                let com = ""
+                index = Math.floor(Math.random()*4)+1
+                com = list[index]
+                console.log(com)
+
+                if(com=="가위"){
+                    result.innerHTML = `결과 : 이겼습니다 ㅇㅁㅇ !`
+                }else if(com=="바위"){
+                    result.innerHTML = `결과 : 비겼습니다!`
+                }else{
+                    result.innerHTML = `결과 : 졌습니다 ㅠㅠ!`
+                }
+                // computer.innerHTML = `컴퓨터의 선택 : ${com}`
+
+            }
+
+            if(rsp=="보"){
+                let index = ""
+                let com = ""
+                index = Math.floor(Math.random()*4)+1
+                com = list[index]
+                console.log(com)
+
+                if(com=="가위"){
+                    result.innerHTML = `결과 : 졌습니다 ㅠㅠ!`
+                }else if(com=="보"){
+                    result.innerHTML = `결과 : 비겼습니다!`
+                }else{
+                    result.innerHTML = `결과 : 이겼습니다 ㅇㅁㅇ !`
+                }
+                // computer.innerHTML = `컴퓨터의 선택 : ${com}`
+
+            }
+        })
+
+    
+
+
+    </script>
+</body>
+</html>

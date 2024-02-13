@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Gowun+Dodum&family=Nanum+Myeongjo:wght@700;800&family=Noto+Sans+KR:wght@100&family=Noto+Serif+KR:wght@300&display=swap');
+    /* font-family: 'Dongle', sans-serif; */
+    /* font-family: 'Gowun Dodum', sans-serif; */
+    /* font-family: 'Nanum Myeongjo', serif; */
+    /* font-family: 'Noto Serif KR', serif; */
+
+* { 
+    text-align: center;
+    }
+
+h1 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 50px
+}
+
+body {
+    width: 640px;
+    margin: auto;
+}
+
+#info {
+    font-family: 'Dongle', serif;
+    padding: 0px, 300px;
+    color: blue;
+    border-style: dotted;
+    border-width: 2px;
+    border-color: skyblue;
+    border-radius: 90px;
+    margin-inline: 30%;
+    font-size: 50px;
+    }
+
+img{
+    height: 400px;
+    border-radius: 200px 150px 180px 130px;
+    padding: 30px, auto, 50px, auto;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+span2 {
+    font-size: 12px;
+}
+
+
+
+
+

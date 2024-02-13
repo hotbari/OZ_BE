@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 메소드 및 속성</title>
+</head>
+<body>
+    
+    <h1 id="song-title" class="heading text" title="memories">
+        <span>어렸을 적 외쳐</span>
+    </h1>
+    <p class="lyrics">
+        인스타로 몰래 보는 넌의 하루들 누가 봐도 헤어진 티를 내
+    </p>
+    <p class="lyrics">
+        너와 나 우리 메모리즈
+    </p>
+
+    <script>
+        console.log(document.querySelectorAll(".lyrics"))
+        console.log(document.getElementsByClassName("lyrics"))
+        const title = document.getElementById("song-title")
+        console.log(title)
+        console.log(title.textContent) //코드 상 공백 포함 - 공백을 포함해야 하는 경우가 뭔지?
+        console.log(title.innerHTML)
+        console.log(title.innerText) //공백없이 텍스트만 출력
+        console.log(title.className)
+        console.log(title.style)
+        console.log(title.title)
+
+
+
+    </script>
+</body>
+</html>

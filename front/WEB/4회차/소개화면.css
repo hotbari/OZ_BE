@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Gowun+Dodum&family=Nanum+Myeongjo:wght@700;800&family=Noto+Sans+KR:wght@100&family=Noto+Serif+KR:wght@300&display=swap');
+
+
+* {
+    box-sizing:border-box;
+    font-family: 'Gowun Dodum', sans-serif;
+    margin-block-end: 20px;
+    
+
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+
+}
+
+.page {
+    border-radius: 20px;
+}
+
+
+
+body{
+    background-color: antiquewhite;
+}
+
+.side {
+    text-align: center;
+    float:left;
+    background-color: orange;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    padding: 20px;
+    height: 350px;
+    overflow: scroll;
+
+    
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.introduce {
+    font-size: 20px;
+    font-family: 'Dongle', sans-serif;
+    width: fit-content;
+}
+.menu {
+    font-size: 20px;
+    color: green;
+}
+
+.contents {
+    border-radius: 20px;
+    background-color: white;
+    height: 350px;
+    padding-left: 200px;
+    padding-top: 10px;
+
+}
+
+.name {
+    font-size: 25px;
+}
+
+.plan {
+    color: green;
+}

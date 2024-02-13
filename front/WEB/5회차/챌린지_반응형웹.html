@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>챌린지_반응형 웹</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: skyblue;
+            min-height: 100vh;
+            }
+
+        .text {
+            font-size: 30px;
+            color: white;
+        }
+
+        @media screen and (max-width:1400px) {
+            body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(138, 138, 240);
+            min-height: 100vh;
+            }
+
+            .text::after {
+                display: flex;
+                justify-content: center;
+                font-size: 20px;
+                font-style: italic;
+                color: black;
+                content: "얘를 어떻게...";
+                padding: 15px;
+            }
+        }
+
+        @media screen and (max-width:900px) {
+            body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(245, 172, 190);
+            min-height: 100vh;
+            }
+
+            .text::after {
+                display: flex;
+                justify-content: center;
+                font-size: 20px;
+                font-style: italic;
+                color: black;
+                content: "얘를...";
+                padding: 15px;
+            }
+        }
+
+        @media screen and (max-width:600px) {
+            body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(236, 243, 190);
+            min-height: 100vh;
+            }
+
+            .text::after {
+                display: flex;
+                justify-content: center;
+                font-size: 20px;
+                font-style: italic;
+                color: black;
+                content: "더 작게...";
+                padding: 15px;
+            }
+        }
+
+
+
+        div.title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="text">여러 화면 크기로 구경해봐요!<br></div>
+</body>
+</html>

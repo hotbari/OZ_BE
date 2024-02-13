@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배추....</title>
+</head>
+<body>
+    <p id="count"></p>
+    <p id="cost"></p>
+    <p id="answer"></p>
+
+
+    <script>
+
+    const countElement = document.querySelector("#count")
+    let count = parseInt(prompt("구입할 배추 개수를 입력하세요")) 
+    countElement.textContent = count
+    document.write(`구입할 배추는 ${count}개 입니다.<br>`)
+
+
+    const costElement = document.querySelector("#cost")
+    let cost = parseInt(prompt("지불할 돈을 입력하세요."))
+    costElement.textContent = cost
+    document.write(`${cost}원을 받았습니다.<br>`)
+
+
+    document.write(`거스름돈 ${question()}원을 돌려드립니다.`)
+
+    function question(n, w) {
+
+        n = count
+        w = cost
+        let result = w - 3000*n ;
+        return result;
+    }
+
+
+
+    </script>
+
+</body>
+</html>

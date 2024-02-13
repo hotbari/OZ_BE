@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>별 트리 찍기</title>
+</head>
+<body>
+    <h1>별 트리 찍기</h1>
+    <div id="container">
+        <p>1번별</p>
+        <p id="first"></p>
+
+        <p>2번별</p>
+        <p id="second"></p>
+        <p>3번별</p>
+        <p id="third"></p>
+
+    </div>
+
+    <script>
+
+        //1번 별
+        function starTree(height){
+            let result = ""
+            for(let i = 0; i < height ; i++){
+                let stars = ""
+                for(let j = 0; j <= i; j++){
+                    stars += "*"
+                }
+                result += stars + "<br>"
+            }
+            return result
+        } 
+
+        const p1 = document.getElementById("first")
+        p1.innerHTML = starTree(5)
+
+        
+        //2번 별
+
+        function reverseTree(height){
+            let result=""
+            for(let i = 0; i < height; i++){
+                let stars = ""
+                for(let j=height-1; j > i; j--){
+                    stars += "*"
+                }
+                result += stars + "<br>"
+            }
+            return result
+        }
+
+        const p2 = document.getElementById("second")
+        p2.innerHTML = starTree(5) + reverseTree(5)
+        
+       
+
+        //3번 별
+        function starThird() {
+            let result=""
+            for(let i = 0; i < 5; i++){
+                let stars = "" 
+
+                for(let j = 5; j > i; j--){
+                    stars += "&nbsp" }
+
+                for(let k = 0; k < 2*i+1; k++){
+                    stars += "*"}
+                
+                result += stars +"<br>"
+            }
+            return result
+        }
+
+        function starThird2() {
+            let result=""
+            for(let i = 0; i < 5; i++){
+                let stars = "" 
+
+                for(let j = 0; j <= i+1; j++){
+                    stars += "&nbsp" }
+
+                for(let k = 7; k > 2 * i ; k--){
+                    stars += "*"}
+                
+                result += stars +"<br>"
+            }
+            return result
+        }
+
+
+
+        const p3 = document.getElementById("third")
+        p3.innerHTML = starThird() + starThird2()
+
+
+
+
+        
+    </script>
+        
+</body>
+</html>

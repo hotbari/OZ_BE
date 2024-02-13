@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>몬잡게임</title>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        //데미지 입력 (양의 정수가 아니면 메세지 뜨고 종료)
+        let full = 100
+
+        const container = document.getElementById("container") //컨테이너 아이디를 가진 애를 컨테이너라고 선언
+        const h1 = document.createElement("h1") //h1 객체를 하나 만들엉
+        h1.textContent = "몬스터 잡기 게임을 시작합니다." //h1 객체에 해당 텍스트를 넣엉
+        container.appendChild(h1) //컨테이너에 h1 객체 만든거 넣엉
+
+        let damage = parseInt(prompt("1회 공격시 입힐 데미지를 입력하세요!(양의 정수)"))
+        let count = 0
+        // const div = document.getElementById("container")
+
+        if (damage > 0) {
+            // if (full > 0) {
+            //     full -= damage
+            //         for (i=1; full > 100; i+=1)
+            //         {document.write(`몬스터를 ${i}회 공격했다!<br>`)
+            //         document.write(`남은 HP는 ${full-damage*i}입니다.`)}
+                
+            // }
+
+            while(full > 0) {
+                full -= damage
+                count += 1
+
+                const p = document.createElement("p")
+                p.textContent = `몬스터를 ${count}회 공격했다!`
+                container.appendChild(p)
+
+                const strong = document.createElement("strong")
+                strong.textContent = `몬스터의 남은 HP는 ${full}입니다.`
+                container.appendChild(strong)
+
+                //만약 HP가 0보다 작아질 경우, HP에 0 대입
+                if (full < 0 ) {strong.textContent = `몬스터의 남은 HP는 0입니다.`
+            }
+        }
+
+            const h2 = document.createElement("h2")
+            h2.textContent = "몬스터 잡기 완료! 수고하셨습니다 :)"
+            h2.style.color = "orange"
+            h2.title = "게임을 다시 시작하고 싶으면 새로고침하세요"
+            container.append(h2)
+        } else {
+            alert("데미지 오입력으로 몬스터 잡기 게임이 취소됐어요,, ㅇㅁㅇ;")}
+    </script>
+</body>
+</html>

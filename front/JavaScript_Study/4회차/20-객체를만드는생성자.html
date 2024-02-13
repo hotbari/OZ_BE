@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체를 만드는 생성자</title>
+</head>
+<body>
+    <script>
+        function Singer(name, member) {
+            this.name = name
+            this.member = member
+        }
+
+        const aespa = new Singer("에스파","카리나, 윈터, 닝닝, 지젤")
+        const TVXQ = new Singer("동방신기","최창민, 정윤호")
+        console.log(aespa)
+        console.log(TVXQ)
+
+
+    </script>
+</body>
+</html>

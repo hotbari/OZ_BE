@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 정보 받기</title>
+    <link href="info.css" rel="stylesheet">
+</head>
+<body>
+    <h1 id="title">회원가입</h1>
+    <div id="container">
+        <!--이메일, 비번 2번, 이름, 폰, 인증번호 버튼, 인증완료 옅은색 버튼
+        지역, 성별, 가입하기(submit)버튼, 콘솔에 받아오기-->
+        <form id="form" action="#">    
+            <table class="table">
+                <tr>
+                    <td><input name="email" type="email" placeholder="EMAIL" autocomplete="off"></td>
+                </tr>
+                <tr>
+                    <td><input name="pw1" type="password" placeholder="PASSWORD"></td>
+                </tr>
+                <tr>
+                    <td><input name="pw2" type="password" placeholder="PASSWORD CHECK"></td>
+                </tr>
+                <tr>
+                    <td><input name="name" placeholder="Name"></td>
+                </tr>
+                <tr>
+                    <td> <div class="phone">
+                        <input name="phone1">
+                        <span> - </span><input name="phone2"><span> - </span><input name="phone3"></div>
+                        <input title="입력한 휴대폰 번호로 인증번호를 전송합니다." type="button" value="인증번호 전송">
+                    </td>
+                </tr>
+                <tr>
+                    <td><input name="num" placeholder="인증번호 입력"><input title="numCheck" type="button" value="인증"></td>
+                </tr>
+                <tr>
+                    <td><select name="region">
+                        <option value="seoul">서울</option>
+                        <option value="daejeon">대전</option>
+                        <option value="daegu">대구</option>
+                        <option value="busan">부산</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            <input type="radio" name="gender" value="male">남성
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female" checked>여성
+                        </label>
+                    
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="가입하기" class="btn"></input>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+    <script src="info.js"></script>
+</body>
+</html>

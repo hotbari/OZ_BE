@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Gowun+Dodum&family=Nanum+Myeongjo:wght@700;800&family=Noto+Sans+KR:wght@100&family=Noto+Serif+KR:wght@300&display=swap');
+
+
+/* 전체적인 세팅 */
+
+* {
+    box-sizing: border-box;
+    font-family: 'Gowun Dodum', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 3px;
+}
+
+.container {
+    height: 100%;
+    background-color: rgb(248, 198, 207);
+}
+
+/*---------------------*/
+
+.chat-screen{
+    height:calc(100% - 90px);
+    overflow: scroll;
+}
+
+/* 유저 정보 표시되는 부분 */
+.user {
+    background-color: rgb(208, 231, 250);
+    padding: 16px;
+    height: 80px;
+}
+
+.user_column {
+    float: left;
+}
+
+.user__pic {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 20px;
+    background-color: rgb(248, 198, 207);
+
+    /* 사진 넣기 */
+    background-clip: border-box;
+    background-image: url(sungchan.JPG);
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+
+    
+}
+
+.user__nick, .user__count {
+    margin: 5px;
+}
+
+.user__count {
+    font-size: 12px;
+    text-align: center;
+    color: gray;
+}
+
+/* 채팅 입력창 */
+.chat-form {
+    height: 90px;
+    background-color: whitesmoke;
+}
+
+.chat-form__field {
+    height: 120px;
+}
+
+.chat-from_msg {
+    float: left;
+    width: calc(100% - 90px);
+    height: 120px;
+    border: none;
+    resize: none;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.chat-form_bt {
+    float: right;
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    background-color: rgb(248, 198, 207);
+    font-size: 18px;
+}
+
+.chat-from_msg:focus {
+    outline: none;
+}
+
+.chat-form_bt:active {
+    background-color: rgb(246, 166, 179);
+}
+

@@ -1,0 +1,49 @@
+/* 말풍선 전용 */
+
+
+.chat-screen__texts {
+    padding: 0;
+    list-style-type: none;
+}
+
+.chat-screen__texts > .text {
+    background-color: white;
+    width: 280px;
+    height: 50px;
+    margin: 0 0 10px 0;
+    padding: 10px;
+    border-radius: 15px;
+    line-height: 30px;
+    position: relative;
+    left: 10px;
+}
+
+.chat-screen__texts > .text::after {
+    content: "";
+    border-right: 16px solid white;
+    border-bottom: 16px solid transparent;
+    position: absolute;
+    top: 10px;
+    left: -10px;
+}
+
+
+/* .chat-screen__texts > .text:hover {
+    background-color: rgb(215, 212, 212);
+    transition: background-color 400ms ease-in;
+}
+
+.chat-screen__texts > .text:hover::after {
+    border-right: 16px solid rgb(215, 212, 212);
+    transition: border-right 400ms ease-in;
+} */
+
+
+.chat-screen__texts > .text:hover {
+    border: 2px solid rgb(248, 148, 165);
+}
+
+.chat-screen__texts > .text:hover::after {
+    border-right: 9px solid rgb(248, 148, 165); 
+    transition: border-right;
+} 

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>math - </title>
+</head>
+<body>
+
+    <button id="draw">럭키드로우</button>
+    <p id="number"></p>
+    
+    <script>
+        const button = document.getElementById("draw")
+        const p = document.getElementById("number")
+        
+        const MAX_NUM = 10
+        const MIN_NUM = 1
+        button.addEventListener("click", function(){
+            p.textContent = Math.floor((Math.random() * MAX_NUM) + MIN_NUM)
+        })
+    </script>
+
+</body>
+</html>

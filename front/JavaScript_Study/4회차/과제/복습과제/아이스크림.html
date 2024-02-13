@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이스크림 주세요</title>
+</head>
+<body>
+    <button id="add">아이스크림 종류 추가</button>
+    <button id="show">아이스크림 이름 출력</button>
+    <button id="print">입력한 아이스크림 목록 출력</button>
+    <h3>입력한 아이스크림 목록</h3>
+    <h3 id="icecream"></h3>
+
+    <script>
+        const add = document.getElementById("add")
+        const show = document.getElementById("show")
+        const printList = document.getElementById("print")
+        const icecream = document.getElementById("icecream")
+        let list = []
+
+        add.addEventListener("click",function(){
+            let name = prompt("추가할 아이스크림을 입력하세요")
+            // console.log(name)
+            list.push(name)
+            console.log(list)
+        })
+
+        show.addEventListener("click",function(){
+            for(i=0;i<list.length;i++){
+                alert(list[i])
+            }
+        })
+
+        //배열은 출력할 때 list.join('구분자')
+        printList.addEventListener("click",function(){
+            icecream.textContent = list.join(', ')
+        })
+    </script>
+</body>
+</html>

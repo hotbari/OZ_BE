@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 기본편</title>
+    <style>
+
+        /* 우선순위 : 1. 아이디 2. 클래스 3. 태그--> */
+
+        h2, p, li {
+            color: yellowgreen;
+        }
+        *{
+            color: red;
+        }
+        li{
+            color: orange;
+        }
+
+        .Siren {
+            color: burlywood;
+        }
+
+        .first { 
+            color: brown;
+        }
+
+        li#Love_119 {
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h2>라이즈 발매곡</h2>
+    <p>2024년까지, 발매순</p>
+    <ol>
+        <li class="first" id="Siren">Siren</li>
+        <li class="first">Memories</li>
+        <li class="first">Get a Guitar</li>
+        <li id="Talk_Saxy">Talk Saxy</li>
+        <li id="Love_119">Love 119</li>
+    </ol>
+</body>
+</html>
