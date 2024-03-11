@@ -14,21 +14,15 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-<<<<<<< HEAD
-from django.contrib import admin
-from django.urls import path
 
-urlpatterns = [
-    path("admin/", admin.site.urls),
-=======
-# config/urls.py
+## config/urls.py
 
 from django.contrib import admin
 from django.urls import path, include
-#from feeds import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("feeds/", include("feeds.urls"))
->>>>>>> refs/remotes/origin/main
+    path("api/v1/feeds/", include("feeds.urls")), #feeds 앱의 API 버전1
+    path("api/v1/users/", include("users.urls")),
+    path("api/v1/reviews/", include("reviews.urls"))
 ]

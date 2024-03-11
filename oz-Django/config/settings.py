@@ -20,34 +20,36 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-<<<<<<< HEAD
 SECRET_KEY = "django-insecure-pga!4^9udz@3e$%ob@s6$mr#v8ji2b6&=f@q-813&##zzwx%ov"
-=======
-SECRET_KEY = "django-insecure-$dc4&=bsy#$r%u4p)-mx(f3!*061nn&@ipuf4g$to&o+x#at9r"
->>>>>>> refs/remotes/origin/main
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
+## config/settings.py
 
 # Application definition
-
-INSTALLED_APPS = [
+DJANGO_SYSTEM_APPS=[
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
-    "django.contrib.staticfiles",
-<<<<<<< HEAD
+    "django.contrib.staticfiles"
+]
+CUSTOM_USER_APPS = [
     "users.apps.UsersConfig",
     "boards.apps.BoardsConfig",
-    "common.apps.CommonConfig"
-=======
->>>>>>> refs/remotes/origin/main
+    "common.apps.CommonConfig",
+    "feeds.apps.FeedsConfig",
+    "reviews.apps.ReviewsConfig",
+    "rest_framework",
+    "rest_framework.authtoken",
+    "rest_framework_simplejwt" 
 ]
+
+INSTALLED_APPS = CUSTOM_USER_APPS + DJANGO_SYSTEM_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -131,8 +133,23 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-<<<<<<< HEAD
 
 AUTH_USER_MODEL = "users.User"
-=======
->>>>>>> refs/remotes/origin/main
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        # 인증에 관련하여 순차적으로 사용(첫번째 것을 먼저 쓰고, 없으면 다음 것)
+        "rest_framework_simplejwt.authentication.JWTAuthentication", # 기본인증설정 : JWT인증
+        "config.authentication.JWTAuthentication"  # 커스텀 JWT 인증 클래스 사용
+    ]
+}
+
+from datetime import timedelta
+
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=14),
+    "SIGNING_KEY": "SECRET",
+    "ALGORITHM": "HS256",
+    "AUTH_HEADER_TYPES": ("Bearer",),
+}
